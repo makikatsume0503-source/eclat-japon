@@ -140,8 +140,17 @@ a:hover {
     font-family: var(--font-heading);
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: var(--text-color);
-    /* Or Matte Gold if preferred */
+    /* Glossy Gold Effect */
+    background: linear-gradient(to bottom,
+            #cfc09f 22%,
+            #634f2c 24%,
+            #cfc09f 26%,
+            #cfc09f 27%,
+            #ffecb3 40%,
+            #3a2c0f 78%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     letter-spacing: 0.2em;
 }
 
