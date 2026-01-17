@@ -1,0 +1,346 @@
+/* Reset & Base */
+:root {
+    --text-color: #17184b;
+    /* Iron Blue (Tetuskon) */
+    --accent-color: #C5A059;
+    /* Matte Gold */
+    --bg-color: #F9F9F7;
+    /* Off-white */
+    --white: #ffffff;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Shippori Mincho', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 2.0;
+    /* Loose line height for luxury feel */
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.container {
+    max-width: 1000px;
+    /* Constrained width for classic look */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.sp-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sp-only {
+        display: block;
+    }
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.0s ease-out, transform 1.0s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomOut 20s linear infinite alternate;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1.0);
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* Slight lightening */
+}
+
+/* Ensure text is readable but minimal */
+.hero-content {
+    z-index: 10;
+    /* Add a subtle glass effect behind text if needed, but keeping it clean for now */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding-top: 55vh;
+    /* Push everything down to clear the ring */
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    /* Or Matte Gold if preferred */
+    letter-spacing: 0.2em;
+}
+
+.main-copy {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+    /* Push sub-copy further down */
+    letter-spacing: 0.15em;
+}
+
+.sub-copy {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+}
+
+
+
+/* Philosophy Section */
+.section {
+    padding: 120px 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--text-color);
+}
+
+.philosophy .text-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.lead-text {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.philosophy p {
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+/* Collection Section */
+.collection {
+    background-color: #fff;
+    /* Slight separation */
+}
+
+.product-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.product-text {
+    flex: 1;
+}
+
+.product-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-family: var(--font-body);
+}
+
+/* CTA Section */
+.cta-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.cta-box {
+    background-color: var(--white);
+    border: 1px solid #eee;
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.invitation-label {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+}
+
+.cta-desc {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-family: var(--font-heading);
+    /* Serif input looks clearer */
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.subscribe-form input[type="email"]:focus {
+    border-color: var(--accent-color);
+}
+
+.subscribe-form button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #b08d4b;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-family: var(--font-heading);
+}
+
+.social-links,
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .main-copy {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .product-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+    }
+
+    .subscribe-form input[type="email"] {
+        width: 100%;
+    }
+}
