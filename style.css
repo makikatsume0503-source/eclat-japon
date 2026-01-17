@@ -132,7 +132,7 @@ a:hover {
     z-index: 10;
     /* Add a subtle glass effect behind text if needed, but keeping it clean for now */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    padding-top: 55vh;
+    padding-top: 65vh;
     /* Push everything down to clear the ring */
 }
 
