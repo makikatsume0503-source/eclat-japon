@@ -132,7 +132,7 @@ a:hover {
     z-index: 10;
     /* Add a subtle glass effect behind text if needed, but keeping it clean for now */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    padding-top: 65vh;
+    padding-top: 75vh;
     /* Push everything down to clear the ring */
 }
 
@@ -140,14 +140,14 @@ a:hover {
     font-family: var(--font-heading);
     font-size: 3rem;
     margin-bottom: 2rem;
-    /* Glossy Gold Effect */
+    /* Glossy Gold Effect - Darker & Richer */
     background: linear-gradient(to bottom,
-            #cfc09f 22%,
-            #634f2c 24%,
-            #cfc09f 26%,
-            #cfc09f 27%,
-            #ffecb3 40%,
-            #3a2c0f 78%);
+            #b08d4b 0%,
+            #8a6e3e 20%,
+            #d4b06a 45%,
+            #8a6e3e 55%,
+            #5e4b25 80%,
+            #b08d4b 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
