@@ -1,7 +1,7 @@
 /* Reset & Base */
 :root {
-    --text-color: #17184b;
-    /* Iron Blue (Tetuskon) */
+    --text-color: #333333;
+    /* Charcoal Gray */
     --accent-color: #C5A059;
     /* Matte Gold */
     --bg-color: #F9F9F7;
@@ -374,9 +374,11 @@ a:hover {
     line-height: 1.8;
 }
 
-.cta-desc {
+.cta-desc,
+.cta-note {
     text-align: left;
     display: inline-block;
     /* Keeps the block centered but text inside left-aligned */
     text-align-last: left;
+    width: 100%;
 }
